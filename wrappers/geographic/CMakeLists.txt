@@ -9,7 +9,7 @@ add_library( vidtk_geographic SHARED
   common.h
   geo_coords.h  geo_coords.cxx
 )
-target_link_libraries(vidtk_geographic vcl ${GeographicLib_LIBRARY})
+target_link_libraries(vidtk_geographic PRIVATE vcl ${GeographicLib_LIBRARY})
 install(TARGETS vidtk_geographic EXPORT vidtk
   RUNTIME DESTINATION bin LIBRARY DESTINATION lib ARCHIVE DESTINATION lib 
 )
